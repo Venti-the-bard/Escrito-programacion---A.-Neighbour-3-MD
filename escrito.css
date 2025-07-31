@@ -1,0 +1,120 @@
+* {
+    margin: 5px;
+    padding: 0;
+}
+
+header p {
+    text-align: right;
+}
+header {
+    background-color: #171717;
+    padding: 0;
+    border: 1px #f2f542;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+header, header * {
+margin: 0;
+}
+
+h1 {
+    color:#f2f542;
+}
+
+body {
+    background-image: url('https://as1.ftcdn.net/jpg/04/16/76/06/1000_F_416760631_dQw6MuUIS0yEoMg3O7AZOpZ3CYNDm3hG.jpg');
+    background-repeat: repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50px; /* para q no quede atras del header */
+}
+
+body::before { /*overlay negro para q la imagen de fondo tenga menos opacidad*/
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+form {
+    background-color: #242424;
+}
+
+form label {
+    display: block; /*para q la etiqueta quede arriba de la cajita para escribir*/
+}
+
+
+button {
+    background-color:#f2f542;
+    color: black;
+}
+
+form input, form select, form button {
+    border-radius: 5px;
+    border: none;
+    box-shadow: none;
+    padding: 5px;
+}
+
+button:hover {
+    background-color:#ffff80;
+}
+
+#alertas {
+    background-color:red;
+}
+
+#confirmacion {
+    background-color:lawngreen;
+}
+
+#total {
+    background-color: lightskyblue;
+}
+
+#alertas, #confirmacion, #total {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#alertas:empty, #confirmacion:empty, #total:empty {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    header h1 {
+        width: 50%;
+    }
+
+
+}
+
+@media (max-width: 768px) and (min-width: 480px) {
+    header h1 {
+        display: block;
+    }
+
+    header p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+    header p {
+        text-align: center;
+    }
+}
+

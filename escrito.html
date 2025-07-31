@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title> Reserva Rock Fest 2025 </title>
+        <link rel="stylesheet" href="escrito.css">
+        <script src="escrito.js" defer></script>
+    </head>
+    <body>
+        <header id="inicio">
+            <h1>🎸Rock Fest </h1>
+            <p><a href="#inicio"> Inicio </a> - <a href="#entradas"> Entradas </a> - <a href="#inicio"> Contacto </a> </p>
+        </header>
+        <form id="entradas">
+            <h1> 🎸Reserva 2025 🎸</h1>
+            <label for="nombre"> Nombre: </label>
+            <input type="text" id="nombre" name="nombre"><br>
+
+            <label for="cantidad"> Cantidad de entradas: </label>
+            <input type="number" id="cantidad" name="cantidad"><br>
+
+            <label for="tipo"> Tipo de entrada: </label>
+            <select id="tipo" name="tipo" required>
+                <option value="general"> General - $1000 </option>
+                <option value="vip"> VIP - $2000 </option>
+                <option value="platino"> Platino - $3000 </option>
+            </select><br>
+
+            <label for="codigo"> Codigo de descuento: </label>
+            <input type="text" id="codigo" name="codigo" placeholder="Ingresa ROCK10"><br>
+
+            <button type="submit"> Calcular Total </button>
+        </form>
+        <div id="alertas"></div>
+        <div id="confirmacion"></div>
+        <div id="total"></div>
+    </body>
+</html>
