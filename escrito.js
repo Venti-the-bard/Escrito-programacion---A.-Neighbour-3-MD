@@ -4,7 +4,7 @@ document.getElementById("entradas").addEventListener("submit", function (event) 
     document.getElementById("confirmacion").textContent = ""; // elimina confirmaciones previas
     document.getElementById("total").textContent = ""; // elimina total previo
 
-    // Get form values
+    // lee los datos ingresados y los div para alertas, confirmacion y total
     const nombre = document.getElementById("nombre").value.trim();
     const cantidad = document.getElementById("cantidad").value;
     const tipo = document.getElementById("tipo").value;
